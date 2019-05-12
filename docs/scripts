@@ -1,0 +1,2 @@
+# Command to run PSL tool on examples to make inference 
+java -jar psl-cli-2.1.0.jar --infer --data simple-acquaintances.data --model simple-acquaintances.psl -D log4j.threshold=DEBUG
