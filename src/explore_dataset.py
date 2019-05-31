@@ -1,7 +1,12 @@
 import json
+import configparser
 
 # read training dataset contents
-with open(r"c:\Users\malik\Documents\GitHub\FewRel\data\train.json") as input_json_file:
+config = configparser.ConfigParser()
+config.read('properties.ini')
+training_file = config['FewRel']['Training_Data_JSON_File_Name_and_Path']
+
+with open(training_file) as input_json_file:
     loaded_json_data = json.load(input_json_file)
 
     print("Number of relations: " + str(len(loaded_json_data)))
